@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for header style -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+    .custom-navbar {
+        display: flex;
+        align-items: center;
+        background: #eceae3;
+        padding: 20px 40px;
+        font-family: 'Roboto', Arial, sans-serif;
+        box-sizing: border-box;
+        border-bottom: 1px solid #eee;
+    }
+    .navbar-logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #222;
+        margin-right: 32px;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+    }
+    .navbar-links {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+    }
+    .navbar-links li {
+        margin: 0 18px;
+    }
+    .navbar-links a {
+        font-family: 'Roboto', Arial, sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #222;
+        text-decoration: none;
+        letter-spacing: 0.04em;
+        transition: color 0.2s, border-bottom 0.2s;
+        border-bottom: 2.5px solid transparent;
+        padding-bottom: 2px;
+    }
+    .navbar-links a.active,
+    .navbar-links a:hover {
+        border-bottom: 2.5px solid #222;
+    }
+    .navbar-cta {
+        font-family: 'Roboto', Arial, sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #222;
+        background: #a4c8fa;
+        padding: 12px 32px;
+        border: 2px solid #222;
+        border-radius: 2px;
+        margin-left: 32px;
+        text-decoration: none;
+        transition: background 0.2s, color 0.2s;
+        letter-spacing: 0.03em;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .navbar-cta:hover {
+        background: #90b4e6;
+        color: #222;
+    }
+    /* Hide hamburger for desktop header style */
+    .hamburger { display: none !important; }
+    /* Responsive: stack menu vertically on small screens */
+    @media (max-width: 700px) {
+        .custom-navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 18px 10px;
+        }
+        .navbar-logo {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        .navbar-links {
+            flex-wrap: wrap;
+        }
+        .navbar-cta {
+            margin-left: 0;
+            margin-top: 12px;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+        <span>Loading...</span>
+    </div>
+    <!-- Navigation Bar (new header based on image1) -->
+    <header>
+      <nav class="custom-navbar">
+        <div class="navbar-logo">
+          Reasearch-HUB
+        </div>
+        <ul class="navbar-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="#">RESEARCH METHODOLOGY</a></li>
+          <li><a href="#">PROTOTYPE &amp; APP</a></li>
+        </ul>
+        <a href="#" class="navbar-cta">
+          KENALI LEBIH LAGI &rarr;
+        </a>
+      </nav>
+    </header>
+
+    <!-- Mosquito Introduction Section -->
+    <main class="mosquito-intro">
+        <div class="container intro-flex">
+            <section class="intro-content">
+                <h2>What is a Mosquito?</h2>
+                <div class="mosquito-article">
+                    <div class="article-content">
+                        <h3>Introduction</h3>
+                        <p>
+                            Mosquitoes are small, flying insects belonging to the family Culicidae. They are known for their slender bodies, long legs, and distinctive proboscis used for feeding.
+                        </p>
+                        <h3>Biology & Lifecycle</h3>
+                        <p>
+                            Mosquitoes undergo complete metamorphosis: <strong>egg</strong>, <strong>larva</strong>, <strong>pupa</strong>, and <strong>adult</strong>. Most species lay eggs in stagnant water, where the larvae and pupae develop before emerging as adults.
+                        </p>
+                        <h3>Role in Ecosystem</h3>
+                        <p>
+                            Mosquitoes serve as food for many creatures such as birds, bats, and fish. However, they are most notable for their role as vectors of diseases such as malaria, dengue, and Zika.
+                        </p>
+                        <h3>Why Study Mosquitoes?</h3>
+                        <p>
+                            Understanding mosquitoes helps us develop better strategies for controlling diseases and protecting public health. Research covers biology, behavior, and innovative control methods.
+                        </p>
+                     </div>
+            </div>
+        </section>
+        <aside class="intro-images">
+            <img src="mosquito-info1.jpg" alt="Mosquito 1" />
+            <img src="mosquito-info2.jpg" alt="Mosquito 2" />
+            <img src="mosquito-info3.jpg" alt="Mosquito 3" />
+            <img src="mosquito-info4.jpg" alt="Mosquito 4" />
+        </aside>
+    </div>
+</main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ResearchHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

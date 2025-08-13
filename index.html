@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for header style -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        .custom-navbar {
+            display: flex;
+            align-items: center;
+            background: #eceae3;
+            padding: 20px 40px;
+            font-family: 'Roboto', Arial, sans-serif;
+            box-sizing: border-box;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #222;
+            margin-right: 32px;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+
+        .navbar-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+        }
+
+        .navbar-links li {
+            margin: 0 18px;
+        }
+
+        .navbar-links a {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #222;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: color 0.2s, border-bottom 0.2s;
+            border-bottom: 2.5px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        .navbar-links a.active,
+        .navbar-links a:hover {
+            border-bottom: 2.5px solid #222;
+        }
+
+        .navbar-cta {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #222;
+            background: #a4c8fa;
+            padding: 12px 32px;
+            border: 2px solid #222;
+            border-radius: 2px;
+            margin-left: 32px;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            letter-spacing: 0.03em;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .navbar-cta:hover {
+            background: #90b4e6;
+            color: #222;
+        }
+
+        /* Hide hamburger for desktop header style */
+        .hamburger { 
+            display: none !important; 
+        }
+
+        /* Responsive: stack menu vertically on small screens */
+        @media (max-width: 700px) {
+            .custom-navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 18px 10px;
+            }
+
+            .navbar-logo {
+                font-size: 2.2rem;
+                margin-bottom: 10px;
+            }
+
+            .navbar-links {
+                flex-wrap: wrap;
+            }
+
+            .navbar-cta {
+                margin-left: 0;
+                margin-top: 12px;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="spinner"></div>
+        <span>Loading...</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="custom-navbar">
+            <div class="navbar-logo">
+                Research-HUB
+            </div>
+            <ul class="navbar-links">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">RESEARCH METHODOLOGY</a></li>
+                <li><a href="prototype.html">PROTOTYPE &amp; APP</a></li>
+            </ul>
+            <a href="#features" class="navbar-cta">
+                Explore More &rarr;
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Slideshow Backdrop -->
+        <div class="slideshow">
+            <img src="EVAN.png" alt="Image 1" class="slide active">
+            <img src="b.jpg" alt="Image 2" class="slide">
+            <img src="c.jpg" alt="Image 3" class="slide">
+        </div>
+        
+        <!-- Text Content -->
+        <div class="container">
+            <h1>Welcome to Research-Hub</h1>
+            <p>Your gateway to groundbreaking academic and scientific research.</p>
+            <a href="#features" class="btn">Explore Research</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="features-container">
+            <!-- Left Sidebar with underline sub-menu -->
+            <div class="features-sidebar">
+                <div class="features-submenu">
+                    <span>PROTOTYPE & APP</span>
+                    <hr class="submenu-underline">
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="features-main">
+                <!-- First Feature Block -->
+                <h2 class="features-title">Visi & Misi</h2>
+                <div class="features-content">
+                    <!-- Feature Card (left) -->
+                    <div class="feature-card">
+                        <h3 class="feature-card-title">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit
+                        </h3>
+                        <p class="feature-card-desc">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit
+                        </p>
+                        <ul class="feature-card-list">
+                            <li>
+                                <a href="#" class="feature-link">
+                                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="feature-link">
+                                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="feature-link">
+                                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="feature-btn">CARA KERJA &rarr;</a>
+                    </div>
+                    
+                    <!-- Product Photo (right) -->
+                    <div class="feature-photos">
+                        <img src="phone-cardio-pop.png" alt="CardioPop on Phone" class="feature-photo" />
+                    </div>
+                </div>
+
+                <!-- Second Feature Block -->
+                <h2 class="features-title">Visi & Misi</h2>
+                <div class="features-content">
+                    <div class="feature-card">
+                        <h3 class="feature-card-title">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit
+                        </h3>
+                        <p class="feature-card-desc">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit
+                        </p>
+                        <ul class="feature-card-list">
+                            <li>
+                                <a href="#" class="feature-link">
+                                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="feature-link">
+                                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="feature-link">
+                                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="feature-btn">CARA KERJA &rarr;</a>
+                    </div>
+                    
+                    <div class="feature-photos">
+                        <img src="phone-cardio-pop.png" alt="CardioPop on Phone" class="feature-photo" />
+                    </div>
+                </div>
+
+                <!-- Third Feature Block -->
+                <h2 class="features-title">Visi & Misi</h2>
+                <div class="features-content">
+                    <div class="feature-card">
+                        <h3 class="feature-card-title">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit
+                        </h3>
+                        <p class="feature-card-desc">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit
+                        </p>
+                        <ul class="feature-card-list">
+                            <li>
+                                <a href="#" class="feature-link">
+                                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="feature-link">
+                                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="feature-link">
+                                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="feature-btn">CARA KERJA &rarr;</a>
+                    </div>
+                    
+                    <div class="feature-photos">
+                        <img src="phone-cardio-pop.png" alt="CardioPop on Phone" class="feature-photo" />
+                    </div>
+                </div>
+
+                <!-- Data Card -->
+                <div class="features-data-card">
+                    <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit</h4>
+                    <div class="features-data-content">
+                        <div class="data-label">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit
+                        </div>
+                        <div class="data-source">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <p class="faq-subtitle">Find answers to common questions about our research and products</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="1">
+                        <span>What is Lorem ipsum dolor sit amet?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-1">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="2">
+                        <span>How does lorem ipsum consectetur work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="3">
+                        <span>Lorem ipsum adipiscing elit compatibility?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-3">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="4">
+                        <span>Lorem ipsum tempor incididunt pricing?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="5">
+                        <span>Lorem ipsum magna aliqua support?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-5">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="6">
+                        <span>Lorem ipsum veniam quis data security?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-6">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="7">
+                        <span>Lorem ipsum nostrud exercitation updates?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-7">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" data-faq="8">
+                        <span>Lorem ipsum commodo consequat installation?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-8">
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="a-footer">
+        <div class="footer-container">
+            <!-- Contact Info & Social Only -->
+            <div class="footer-col contact-info">
+                <img src="unpar-logo.png" alt="Universitas Katolik Parahyangan Logo" class="footer-logo" />
+                <div class="contact-details">
+                    <div>
+                        <span class="footer-icon">&#128205;</span> 
+                        Jln. Ciumbuleuit No. 00 Bandung 00000 Jawa Barat
+                    </div>
+                    <div>
+                        <span class="footer-icon">&#128222;</span> 
+                        (062) 000 0000; (062) 000 0000
+                    </div>
+                    <div>
+                        <span class="footer-icon">&#9993;</span> 
+                        humkoler@research.ac.id
+                    </div>
+                    <div>
+                        <span class="footer-icon">&#128241;</span> 
+                        0858-8214-1955
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        window.addEventListener("load", function() {
+            var loadingDiv = document.getElementById("loading");
+            if (loadingDiv) {
+                loadingDiv.style.display = "none";
+            }
+        });
+
+        // FAQ Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqId = this.getAttribute('data-faq');
+                    const answer = document.getElementById(`faq-${faqId}`);
+                    const icon = this.querySelector('.faq-icon');
+                    const isOpen = answer.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.classList.remove('active');
+                    });
+                    document.querySelectorAll('.faq-icon').forEach(ic => {
+                        ic.textContent = '+';
+                    });
+                    document.querySelectorAll('.faq-question').forEach(q => {
+                        q.classList.remove('active');
+                    });
+                    
+                    // Toggle current FAQ item
+                    if (!isOpen) {
+                        answer.classList.add('active');
+                        icon.textContent = '−';
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
